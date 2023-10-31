@@ -1,6 +1,7 @@
 package cpsc2150.listDec;
 
 import java.util.List;
+import java.util.Random;
 
 interface IShuffleList<T> extends List<T> {
 
@@ -14,10 +15,16 @@ interface IShuffleList<T> extends List<T> {
      * @post
      * 
      */
-    default void shuffle(int swaps) {
-    //randomly generate number 1
-    //randomly generate number 2
-    //modulo size of the list 
+    default void shuffle(int swaps){
+        Random generator = new Random();
+        for(int i = 0; i < swaps; i++)
+        {
+            int swapIndex1 = generator.nextInt(myList.size());
+            int swapIndex2 = generator.nextInt(myList.size());
+            T tempVal = myList[swapIndex1];
+            myList[swapIndex1] = myList[swapIndex2];
+            myList[swapIndex2] = tempVal;
+        }
     }
 
     /**
