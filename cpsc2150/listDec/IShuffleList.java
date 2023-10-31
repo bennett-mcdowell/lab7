@@ -16,7 +16,7 @@ import java.util.Random;
  *  |self| >= 0
  */
 
-interface IShuffleList<T> extends List<T> {
+public interface IShuffleList<T> extends List<T> {
 
     /**
      * Randomly picks 2 positions in the list and swaps them
