@@ -54,10 +54,9 @@ interface IShuffleList<T> extends List<T> {
 
     default void swap(int i, int j) {
         T tempVal;
-        T iT = get(i);
-        T jT = get(j);
-        tempVal = iT;
-        iT = jT;
-        jT = tempVal;
+        
+        tempVal = get(i);
+        set(i, get(j));
+        set(j, tempVal);
     }
 }
