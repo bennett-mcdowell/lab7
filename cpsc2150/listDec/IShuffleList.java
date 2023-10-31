@@ -23,9 +23,9 @@ interface IShuffleList<T> extends List<T> {
      * 
      * @param swaps the number of swaps to perform
      * 
-     * @pre 
+     * @pre swaps > 0
      * 
-     * @post
+     * @post self = [itself, but with values in different positions]
      * 
      */
     default void shuffle(int swaps){
@@ -46,9 +46,9 @@ interface IShuffleList<T> extends List<T> {
      * @param i the first position to swap
      * @param j the second position to swap
      * 
-     * @pre 
+     * @pre (i != j) && (0 <= i < |self|) && (0 <= j < |self|)
      * 
-     * @post 
+     * @post self = [itself, but with the values at index i and j swapped]
      * 
      */ 
 
