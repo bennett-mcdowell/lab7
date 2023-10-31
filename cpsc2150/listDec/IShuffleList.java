@@ -2,6 +2,19 @@ package cpsc2150.listDec;
 
 import java.util.List;
 
+/**
+ * ShuffleList extends the existing List class in java, allowing more functionality for users (specifically a swap and shuffle function)
+ * 
+ * Initialization ensures:
+ *  A list is initialized to contain values of type T
+ * 
+ * Defines:
+ *  self: the list structure itself
+ * 
+ * Constraints:
+ *  |self| >= 0
+ */
+
 interface IShuffleList<T> extends List<T> {
 
     /**
