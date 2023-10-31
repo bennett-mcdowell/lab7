@@ -19,11 +19,9 @@ interface IShuffleList<T> extends List<T> {
         Random generator = new Random();
         for(int i = 0; i < swaps; i++)
         {
-            int swapIndex1 = generator.nextInt(myList.size());
-            int swapIndex2 = generator.nextInt(myList.size());
-            T tempVal = myList[swapIndex1];
-            myList[swapIndex1] = myList[swapIndex2];
-            myList[swapIndex2] = tempVal;
+            int swapIndex1 = generator.nextInt(size());
+            int swapIndex2 = generator.nextInt(size());
+            swap(swapIndex1, swapIndex2);
         }
     }
 
